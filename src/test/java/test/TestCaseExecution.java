@@ -10,12 +10,25 @@ import pages.LoginPage;
 public class TestCaseExecution extends StepBaseClass{
 	
 	
-	@Test
+	@Test (priority = 1)
 	public void testCaseOne() {
 		LoginPage objLoginPage = new LoginPage();
-		objLoginPage.enterUsername("student");
-		objLoginPage.enterPassword("Password123");
-		objLoginPage.clickSubmitButton();
+//		objLoginPage.enterUsername("student");
+//		objLoginPage.enterPassword("Password123");
+//		objLoginPage.clickSubmitButton();
+		
+		objLoginPage.loginMethod("student", "Password123");
+
+	}
+	
+	@Test (priority = 2)
+	public void testCaseTwo() {
+		LoginPage objLoginPage = new LoginPage();
+//		objLoginPage.enterUsername("student");
+//		objLoginPage.enterPassword("Password123");
+//		objLoginPage.clickSubmitButton();
+		
+		objLoginPage.loginMethod("student", "Password123");
 
 	}
 
